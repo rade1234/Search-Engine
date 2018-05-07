@@ -1,0 +1,18 @@
+<h2>{{trackName}}</h2>
+<audio #audio_id controls type="audio" style="width:100%"></audio>
+<table class="table">
+  <thead>
+  <tr>
+    <th></th>
+    <th> Tytuł utworu</th>
+    <th> Wykonawca</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let track of tracks" (click)="play(audio_id, track)">
+    <td> {{track.track_number}}</td>
+    <td> {{track.name}}</td>
+    <td> {{track.artists[0].name}}</td>
+  </tr>
+  </tbody>
+</table>
